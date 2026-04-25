@@ -190,9 +190,9 @@ const bermudas: Product[] = [
 const vestidos: Product[] = [
   {
     id: 23,
-    nome: 'Vestido Azul Infantil',
+    nome: 'Vestido Azul',
     cat: 'vestidos',
-    preco: 100,
+    preco: 60,
     img: 'https://i.imgur.com/oVQ2dWX.jpeg',
     descricao:
       'Vestido azul infantil com caimento leve, visual delicado e toque confortável para deixar os passeios ainda mais estilosos.',
@@ -201,9 +201,9 @@ const vestidos: Product[] = [
   },
   {
     id: 24,
-    nome: 'Vestido Vermelho Infantil',
+    nome: 'Vestido Vermelho ',
     cat: 'vestidos',
-    preco: 100,
+    preco: 60,
     img: 'https://i.imgur.com/ZGYpnxL.jpeg',
     descricao:
       'Vestido vermelho infantil com presença marcante, modelagem confortável e acabamento delicado para ocasiões especiais e do dia a dia.',
