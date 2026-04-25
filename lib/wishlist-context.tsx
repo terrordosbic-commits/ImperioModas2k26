@@ -21,19 +21,28 @@ export function WishlistProvider({ children }: { children: ReactNode }) {
 
   useEffect(() => {
     setMounted(true)
-    const stored = localStorage.getItem(WISHLIST_KEY)
-    if (stored) {
-      try {
-        setItems(JSON.parse(stored))
-      } catch {
-        setItems([])
+    try {
+      const stored = localStorage.getItem(WISHLIST_KEY)
+      if (stored) {
+        try {
+          setItems(JSON.parse(stored))
+        } catch {
+          setItems([])
+        }
       }
+    } catch {
+      // Safari modo privado pode lançar exceção ao acessar localStorage
+      setItems([])
     }
   }, [])
 
   useEffect(() => {
     if (mounted) {
-      localStorage.setItem(WISHLIST_KEY, JSON.stringify(items))
+      try {
+        localStorage.setItem(WISHLIST_KEY, JSON.stringify(items))
+      } catch {
+        // Safari modo privado pode lançar exceção ao gravar localStorage
+      }
     }
   }, [items, mounted])
 

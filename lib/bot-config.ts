@@ -30,48 +30,70 @@ REGRAS:
 
 export function getBotConfig(): BotConfig {
   if (typeof window === 'undefined') return DEFAULT_BOT_CONFIG
-  const stored = localStorage.getItem(BOT_CONFIG_KEY)
-  if (!stored) return DEFAULT_BOT_CONFIG
   try {
-    return { ...DEFAULT_BOT_CONFIG, ...JSON.parse(stored) }
+    const stored = localStorage.getItem(BOT_CONFIG_KEY)
+    if (!stored) return DEFAULT_BOT_CONFIG
+    try {
+      return { ...DEFAULT_BOT_CONFIG, ...JSON.parse(stored) }
+    } catch {
+      return DEFAULT_BOT_CONFIG
+    }
   } catch {
+    // Safari modo privado pode lançar exceção ao acessar localStorage
     return DEFAULT_BOT_CONFIG
   }
 }
 
 export function saveBotConfig(config: Partial<BotConfig>): void {
   if (typeof window === 'undefined') return
-  const current = getBotConfig()
-  localStorage.setItem(BOT_CONFIG_KEY, JSON.stringify({ ...current, ...config }))
+  try {
+    const current = getBotConfig()
+    localStorage.setItem(BOT_CONFIG_KEY, JSON.stringify({ ...current, ...config }))
+  } catch {
+    // Safari modo privado pode lançar exceção ao gravar localStorage
+  }
 }
 
 export function getChatHistory(): ChatSession[] {
   if (typeof window === 'undefined') return []
-  const stored = localStorage.getItem(CHAT_HISTORY_KEY)
-  if (!stored) return []
   try {
-    return JSON.parse(stored)
+    const stored = localStorage.getItem(CHAT_HISTORY_KEY)
+    if (!stored) return []
+    try {
+      return JSON.parse(stored)
+    } catch {
+      return []
+    }
   } catch {
+    // Safari modo privado pode lançar exceção ao acessar localStorage
     return []
   }
 }
 
 export function saveChatSession(session: ChatSession): void {
   if (typeof window === 'undefined') return
-  const history = getChatHistory()
-  const index = history.findIndex((s) => s.id === session.id)
-  if (index >= 0) {
-    history[index] = session
-  } else {
-    history.push(session)
+  try {
+    const history = getChatHistory()
+    const index = history.findIndex((s) => s.id === session.id)
+    if (index >= 0) {
+      history[index] = session
+    } else {
+      history.push(session)
+    }
+    // Manter apenas últimas 50 sessões
+    if (history.length > 50) history.shift()
+    localStorage.setItem(CHAT_HISTORY_KEY, JSON.stringify(history))
+  } catch {
+    // Safari modo privado pode lançar exceção ao gravar localStorage
   }
-  // Manter apenas últimas 50 sessões
-  if (history.length > 50) history.shift()
-  localStorage.setItem(CHAT_HISTORY_KEY, JSON.stringify(history))
 }
 
 export function clearChatHistory(): void {
   if (typeof window === 'undefined') return
-  localStorage.removeItem(CHAT_HISTORY_KEY)
+  try {
+    localStorage.removeItem(CHAT_HISTORY_KEY)
+  } catch {
+    // Safari modo privado pode lançar exceção ao acessar localStorage
+  }
 }
 

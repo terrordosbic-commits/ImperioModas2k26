@@ -38,6 +38,13 @@ export const metadata: Metadata = {
     index: true,
     follow: true,
   },
+  // Meta tags específicas para iOS/Safari
+  other: {
+    'apple-mobile-web-app-capable': 'yes',
+    'apple-mobile-web-app-status-bar-style': 'default',
+    'apple-mobile-web-app-title': 'Império Modas',
+    'format-detection': 'telephone=no',
+  },
 }
 
 export const viewport: Viewport = {
