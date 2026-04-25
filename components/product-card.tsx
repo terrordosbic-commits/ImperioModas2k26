@@ -130,20 +130,20 @@ export function ProductCard({ product, index = 0 }: ProductCardProps) {
         </div>
 
 
-        <CardContent className="flex flex-1 flex-col p-3 md:p-4">
-          <h3 className="line-clamp-2 min-h-[2.5rem] font-medium leading-tight text-sm md:text-base">{product.nome}</h3>
-          <div className="description-effect mt-2 p-2 md:mt-3 md:p-3">
+        <CardContent className="flex flex-1 flex-col p-2 md:p-4">
+          <h3 className="line-clamp-2 min-h-[2rem] md:min-h-[2.5rem] font-medium leading-tight text-xs md:text-base">{product.nome}</h3>
+          <div className="hidden md:block description-effect mt-2 md:mt-3 p-2 md:p-3">
             <p className="line-clamp-3 text-xs md:text-sm leading-relaxed text-muted-foreground">{description}</p>
           </div>
-          <div className="mt-auto pt-2 md:pt-3">
-            <span className="text-base md:text-lg font-bold text-primary">{formatPrice(product.preco)}</span>
+          <div className="mt-auto pt-1.5 md:pt-3">
+            <span className="text-sm md:text-lg font-bold text-primary">{formatPrice(product.preco)}</span>
           </div>
         </CardContent>
 
-        <CardFooter className="p-3 pt-0 md:p-4 md:pt-0">
+        <CardFooter className="p-2 pt-0 md:p-4 md:pt-0">
           <Button onClick={handleAdd} className="w-full" size="sm">
-            <ShoppingBag className="mr-2 h-4 w-4" />
-            Adicionar
+            <ShoppingBag className="mr-1.5 md:mr-2 h-3.5 w-3.5 md:h-4 md:w-4" />
+            <span className="text-xs md:text-sm">Adicionar</span>
           </Button>
         </CardFooter>
       </Card>
