@@ -73,12 +73,12 @@ export function Header() {
     </div>
 
     <header className="sticky top-0 z-50 w-full border-b border-border/40 bg-background/95 backdrop-blur supports-[backdrop-filter]:bg-background/60">
-      <div className="container mx-auto flex h-16 items-center justify-between px-4">
+      <div className="container mx-auto flex h-14 md:h-16 items-center justify-between px-3 md:px-4">
 
         {/* Logo */}
         <Link href="/" className="flex flex-col">
-          <span className="text-xl font-bold tracking-tight text-primary">IMPÉRIO MODAS</span>
-          <span className="text-xs text-muted-foreground">Moda com estilo e preço justo</span>
+          <span className="text-lg md:text-xl font-bold tracking-tight text-primary">IMPÉRIO MODAS</span>
+          <span className="text-[10px] md:text-xs text-muted-foreground">Moda com estilo e preço justo</span>
         </Link>
 
         {/* Desktop Navigation */}

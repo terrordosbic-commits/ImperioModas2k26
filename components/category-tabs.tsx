@@ -17,16 +17,16 @@ export function CategoryTabs({ products }: CategoryTabsProps) {
   const filteredProducts = activeTab === 'todos' ? products : products.filter((p) => p.cat === activeTab)
 
   return (
-    <section id="produtos" className="container mx-auto px-4 py-12">
-      <h2 className="mb-8 text-center text-2xl font-bold md:text-3xl">Nossos Produtos</h2>
+    <section id="produtos" className="container mx-auto px-3 md:px-4 py-8 md:py-12">
+      <h2 className="mb-6 md:mb-8 text-center text-xl md:text-2xl font-bold lg:text-3xl">Nossos Produtos</h2>
 
       <Tabs value={activeTab} onValueChange={setActiveTab} className="w-full">
-        <TabsList className="mb-8 flex h-auto w-full flex-wrap justify-center gap-2 bg-transparent">
+        <TabsList className="mb-6 md:mb-8 flex h-auto w-full flex-wrap justify-center gap-1.5 md:gap-2 bg-transparent">
           {categories.map((cat) => (
             <TabsTrigger
               key={cat}
               value={cat}
-              className="rounded-full border bg-background px-4 py-2 data-[state=active]:bg-primary data-[state=active]:text-primary-foreground"
+              className="rounded-full border bg-background px-3 py-1.5 text-xs md:px-4 md:py-2 md:text-sm data-[state=active]:bg-primary data-[state=active]:text-primary-foreground"
             >
               {cat === 'todos' ? 'Todos' : CATEGORY_LABELS[cat as Category]}
             </TabsTrigger>

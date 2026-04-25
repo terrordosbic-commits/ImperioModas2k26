@@ -129,19 +129,18 @@ export function ProductCard({ product, index = 0 }: ProductCardProps) {
           </button>
         </div>
 
-        {/* Content - flex-1 para empurrar footer */}
-        <CardContent className="flex flex-1 flex-col p-4">
-          <h3 className="line-clamp-2 min-h-[2.5rem] font-medium leading-tight">{product.nome}</h3>
-          <div className="description-effect mt-3 p-3">
-            <p className="line-clamp-3 text-sm leading-relaxed text-muted-foreground">{description}</p>
+
+        <CardContent className="flex flex-1 flex-col p-3 md:p-4">
+          <h3 className="line-clamp-2 min-h-[2.5rem] font-medium leading-tight text-sm md:text-base">{product.nome}</h3>
+          <div className="description-effect mt-2 p-2 md:mt-3 md:p-3">
+            <p className="line-clamp-3 text-xs md:text-sm leading-relaxed text-muted-foreground">{description}</p>
           </div>
-          <div className="mt-auto pt-3">
-            <span className="text-lg font-bold text-primary">{formatPrice(product.preco)}</span>
+          <div className="mt-auto pt-2 md:pt-3">
+            <span className="text-base md:text-lg font-bold text-primary">{formatPrice(product.preco)}</span>
           </div>
         </CardContent>
 
-        {/* Footer - sempre na base */}
-        <CardFooter className="p-4 pt-0">
+        <CardFooter className="p-3 pt-0 md:p-4 md:pt-0">
           <Button onClick={handleAdd} className="w-full" size="sm">
             <ShoppingBag className="mr-2 h-4 w-4" />
             Adicionar

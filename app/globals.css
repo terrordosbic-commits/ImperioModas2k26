@@ -124,6 +124,13 @@
   }
 }
 
+/* Mobile font-size reduction */
+@media (max-width: 640px) {
+  html {
+    font-size: 14px;
+  }
+}
+
 /* ============================================
    ANIMAÇÕES CUSTOMIZADAS - IMPÉRIO MODAS
    ============================================ */
