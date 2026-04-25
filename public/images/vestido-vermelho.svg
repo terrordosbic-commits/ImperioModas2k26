@@ -1,0 +1,11 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 800" role="img" aria-labelledby="title desc">
+  <title id="title">Vestido Vermelho Infantil</title>
+  <desc id="desc">Ilustração simples de um vestido vermelho infantil.</desc>
+  <rect width="800" height="800" fill="#fee2e2"/>
+  <circle cx="400" cy="170" r="70" fill="#fecaca"/>
+  <path d="M320 210h160l50 110-38 22-35-46-20 72h135l74 250H154l74-250h135l-20-72-35 46-38-22 50-110z" fill="#dc2626"/>
+  <path d="M320 210h160l-16 58H336l-16-58z" fill="#b91c1c"/>
+  <path d="M247 464h306" stroke="#fca5a5" stroke-width="18" stroke-linecap="round"/>
+  <path d="M214 574h372" stroke="#fca5a5" stroke-width="18" stroke-linecap="round"/>
+  <text x="400" y="710" text-anchor="middle" font-family="Arial, sans-serif" font-size="38" fill="#7f1d1d">Vestido Vermelho</text>
+</svg>

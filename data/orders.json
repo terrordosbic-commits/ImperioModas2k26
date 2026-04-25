@@ -1,0 +1,80 @@
+[
+  {
+    "customer": {
+      "cpf": "014.172.399-80",
+      "nomeCompleto": "asdwasd",
+      "email": "asdadsad@gmail.com",
+      "telefone": "123123123123131313131",
+      "endereco": "asdasda",
+      "rua": "dadadad",
+      "numeroCasa": "31",
+      "bairro": "",
+      "cidade": "asdwasdwa",
+      "referencia": "dasdwa"
+    },
+    "items": [
+      {
+        "id": 2,
+        "nome": "1 conjunto Gucci – tamanho 8",
+        "qtd": 1,
+        "preco": 120
+      }
+    ],
+    "total": 120,
+    "id": 1,
+    "createdAt": "2026-04-23T17:39:20.157Z",
+    "status": "pendente"
+  },
+  {
+    "customer": {
+      "cpf": "123.131.231-23",
+      "nomeCompleto": "asdasdasda",
+      "email": "andrew@gmail.com",
+      "telefone": "12312313212313",
+      "endereco": "1231231",
+      "rua": "123131",
+      "numeroCasa": "123",
+      "bairro": "",
+      "cidade": "123123",
+      "referencia": "12313"
+    },
+    "items": [
+      {
+        "id": 1,
+        "nome": "2 conjuntos Gucci – tamanho 2 anos",
+        "qtd": 1,
+        "preco": 120
+      }
+    ],
+    "total": 120,
+    "id": 2,
+    "createdAt": "2026-04-23T17:53:28.949Z",
+    "status": "pendente"
+  },
+  {
+    "customer": {
+      "cpf": "031.231.321-23",
+      "nomeCompleto": "asdasdas",
+      "email": "asdasd@gmail.com",
+      "telefone": "1231231231231231",
+      "endereco": "asdasd",
+      "rua": "asdsada",
+      "numeroCasa": "123",
+      "bairro": "",
+      "cidade": "asdasd",
+      "referencia": "asdas"
+    },
+    "items": [
+      {
+        "id": 2,
+        "nome": "Conjunto Gucci Infantil",
+        "qtd": 1,
+        "preco": 120
+      }
+    ],
+    "total": 120,
+    "id": 3,
+    "createdAt": "2026-04-24T20:17:50.480Z",
+    "status": "pendente"
+  }
+]

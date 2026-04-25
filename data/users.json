@@ -1,0 +1,10 @@
+[
+  {
+    "id": 1,
+    "username": "admin",
+    "email": "admin@imperiomodas.com",
+    "role": "admin",
+    "passwordHash": "$2a$10$K7L1OJ45/4Y2nIvhRVpCe.FSmhDdWoXehVzJptJ/op0lSsvqNu8V2",
+    "createdAt": "2024-01-01T00:00:00.000Z"
+  }
+]
